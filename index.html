@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Anwar — AI, Cloud & Systems</title>
+  <meta name="description"
+    content="Muhammad Anwar — Computer Science Student exploring AI, cloud, and real-world systems. View projects, read blogs, and connect." />
+  <meta name="author" content="Muhammad Anwar" />
+  <link rel="shortcut icon" href="favicon.svg" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scroll-progress"></div>
+
+  <!-- Animated Background -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursor-dot"></div>
+  <div class="cursor-ring" id="cursor-ring"></div>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-char">&lt;</span><span class="logo-name">anwar</span><span class="logo-char">/&gt;</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="#about" class="nav-link" data-section="about">About</a>
+        <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+        <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+        <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+        <a href="#blogs" class="nav-link" data-section="blogs">Blogs</a>
+        <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a href="resume.pdf" target="_blank" download class="nav-btn nav-btn-resume">
+          <i data-lucide="download" class="nav-btn-icon"></i>
+          Resume
+        </a>
+        <a href="#meeting" class="nav-btn">
+          <i data-lucide="calendar" class="nav-btn-icon"></i>
+          Book 1:1
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge anim-reveal">
+        <span class="badge-pulse"></span>
+        Available for opportunities
+      </div>
+      <h1 class="hero-title anim-reveal">
+        <span class="hero-greeting">Hey, I'm</span>
+        <span class="hero-name">Muhammad Anwar</span>
+      </h1>
+      <div class="hero-typing anim-reveal">
+        <span class="typing-static">I'm a </span>
+        <span class="typing-dynamic" id="typing-text"></span>
+        <span class="typing-cursor">|</span>
+      </div>
+      <p class="hero-tagline anim-reveal">
+        Exploring AI, cloud, and real-world systems — one project at a time.
+      </p>
+      <div class="hero-cta anim-reveal">
+        <a href="#projects" class="btn btn-ghost">
+          <i data-lucide="code-2" class="btn-icon"></i> View Work
+        </a>
+        <a href="#blogs" class="btn btn-ghost">
+          <i data-lucide="pen-tool" class="btn-icon"></i> Read Blogs
+        </a>
+        <a href="resume.pdf" download class="btn btn-resume">
+          <i data-lucide="download" class="btn-icon"></i> Download Resume
+        </a>
+        <button class="btn btn-glow" id="open-chat-hero">
+          <i data-lucide="sparkles" class="btn-icon"></i> Talk to Me (AI)
+        </button>
+        <a href="#meeting" class="btn btn-accent">
+          <i data-lucide="star" class="btn-icon"></i> Book 1:1 Meeting
+        </a>
+      </div>
+      <div class="hero-scroll anim-reveal">
+        <div class="scroll-line"></div>
+        <span>scroll</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">01</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="about-grid">
+        <div class="about-text anim-reveal">
+          <p class="about-lead">I'm a <strong>BS Computer Science student at FAST NUCES</strong> currently in my 2nd
+            year. I'm not the "follow the syllabus and wait" type — I build things on the side, break them, learn why,
+            and ship again.</p>
+          <p>My core interests sit at the intersection of <strong>AI systems</strong>, <strong>cloud
+              infrastructure</strong>, and <strong>data engineering</strong>. I've built context-aware AI agents with
+            persistent memory, developed Linux kernel modules, and architected cloud workflows — all while keeping up
+            with coursework.</p>
+          <p>I'm driven by curiosity. If something exists, I want to understand how it works at a low level. If
+            something doesn't exist, I want to build it.</p>
+        </div>
+        <div class="about-cards anim-reveal">
+          <div class="mini-card">
+            <i data-lucide="brain"></i>
+            <span>AI & LLMs</span>
+          </div>
+          <div class="mini-card">
+            <i data-lucide="cloud"></i>
+            <span>Cloud (AWS/Azure)</span>
+          </div>
+          <div class="mini-card">
+            <i data-lucide="database"></i>
+            <span>Data Engineering</span>
+          </div>
+          <div class="mini-card">
+            <i data-lucide="cpu"></i>
+            <span>Systems Programming</span>
+          </div>
+          <div class="mini-card">
+            <i data-lucide="globe"></i>
+            <span>Web Development</span>
+          </div>
+          <div class="mini-card">
+            <i data-lucide="terminal"></i>
+            <span>Linux & DevOps</span>
+          </div>
+        </div>
+      </div>
+      <!-- Resume Preview Card -->
+      <div class="resume-preview anim-reveal">
+        <div class="resume-card">
+          <div class="resume-card-glow"></div>
+          <div class="resume-card-inner">
+            <div class="resume-card-header">
+              <div class="resume-card-icon">
+                <i data-lucide="file-text"></i>
+              </div>
+              <div>
+                <h3>Muhammad Anwar</h3>
+                <p>Computer Science · FAST NUCES</p>
+              </div>
+            </div>
+            <div class="resume-highlights">
+              <div class="resume-hl">
+                <i data-lucide="code-2"></i>
+                <span>C, C++, Python, JS, SQL</span>
+              </div>
+              <div class="resume-hl">
+                <i data-lucide="cloud"></i>
+                <span>AWS · Azure · Cloud Architecture</span>
+              </div>
+              <div class="resume-hl">
+                <i data-lucide="brain"></i>
+                <span>AI Agents · LLMs · Data Engineering</span>
+              </div>
+              <div class="resume-hl">
+                <i data-lucide="users"></i>
+                <span>AWS Co-Lead · MLSA · GDG</span>
+              </div>
+            </div>
+            <a href="resume.pdf" download class="btn btn-resume btn-resume-card">
+              <i data-lucide="download" class="btn-icon"></i> Download Full Resume (PDF)
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS ===== -->
+  <section class="section section-dark" id="skills">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">02</span>
+        <h2 class="section-title">Skills & Tools</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="skills-orbit anim-reveal">
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i data-lucide="code-2"></i> Languages</h3>
+          <div class="skill-pills">
+            <span class="pill" data-level="90">C</span>
+            <span class="pill" data-level="90">C++</span>
+            <span class="pill" data-level="85">Python</span>
+            <span class="pill" data-level="80">JavaScript</span>
+            <span class="pill" data-level="70">PHP</span>
+            <span class="pill" data-level="85">SQL</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i data-lucide="wrench"></i> Technologies</h3>
+          <div class="skill-pills">
+            <span class="pill">Hugo</span>
+            <span class="pill">Git & GitHub</span>
+            <span class="pill">n8n</span>
+            <span class="pill">QEMU/KVM</span>
+            <span class="pill">LaTeX</span>
+            <span class="pill">WordPress</span>
+            <span class="pill">Docker</span>
+          </div>
+        </div>
+        <div class="skill-group">
+          <h3 class="skill-group-title"><i data-lucide="layers"></i> Domains</h3>
+          <div class="skill-pills">
+            <span class="pill pill-accent">AI Systems</span>
+            <span class="pill pill-accent">Cloud Computing</span>
+            <span class="pill pill-accent">Web Development</span>
+            <span class="pill pill-accent">System-Level Programming</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== EXPERIENCE ===== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">03</span>
+        <h2 class="section-title">Experience & Community</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="exp-timeline">
+        <div class="exp-item anim-reveal">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-top">
+              <h3>Google Developers Club</h3>
+              <span class="exp-badge">Tier 1 Member</span>
+            </div>
+            <ul>
+              <li>Built static websites using Hugo</li>
+              <li>Developed Linux kernel modules (low-level systems work)</li>
+              <li>Built API-integrated weather web app</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-item anim-reveal">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-top">
+              <h3>AWS FAST NUCES</h3>
+              <span class="exp-badge badge-highlight">Co-Lead</span>
+            </div>
+            <ul>
+              <li>Managed and coordinated AWS cloud events</li>
+              <li>Led workshops and community-building activities</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-item anim-reveal">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-top">
+              <h3>Microsoft Learn Student Ambassador</h3>
+              <span class="exp-badge">MLSA</span>
+            </div>
+            <ul>
+              <li>Promoted Azure & Microsoft technologies</li>
+              <li>Organized technical sessions and learning events</li>
+            </ul>
+          </div>
+        </div>
+        <div class="exp-item anim-reveal">
+          <div class="exp-dot"></div>
+          <div class="exp-card">
+            <div class="exp-top">
+              <h3>SOS Village</h3>
+              <span class="exp-badge">Tutor</span>
+            </div>
+            <ul>
+              <li>Mentored students and supported their learning development</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">04</span>
+        <h2 class="section-title">Projects</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="projects-grid">
+
+        <article class="proj-card proj-featured anim-reveal" data-tilt>
+          <div class="proj-glow"></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-label label-featured">⭐ Featured</span>
+              <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  data-lucide="github"></i></a>
+            </div>
+            <h3>Nova AI Agent</h3>
+            <p>Context-aware AI agent built with n8n + LLaMA 3.3 + PostgreSQL memory. Handles intelligent automation
+              with persistent long-term context and multi-step reasoning.</p>
+            <div class="proj-tags">
+              <span>n8n</span><span>LLaMA 3.3</span><span>PostgreSQL</span><span>AI Agent</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card anim-reveal" data-tilt>
+          <div class="proj-glow"></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-label">API</span>
+              <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  data-lucide="github"></i></a>
+            </div>
+            <h3>Weather App</h3>
+            <p>Real-time weather data app using external APIs. Demonstrates REST, JSON parsing, and HTTP integration
+              patterns.</p>
+            <div class="proj-tags">
+              <span>JavaScript</span><span>REST API</span><span>JSON</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card anim-reveal" data-tilt>
+          <div class="proj-glow"></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-label">Game Dev</span>
+              <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  data-lucide="github"></i></a>
+            </div>
+            <h3>Flappy Bird Game</h3>
+            <p>Classic Flappy Bird clone in C++ with SFML. Game loop mechanics, collision detection, and real-time
+              graphics rendering.</p>
+            <div class="proj-tags">
+              <span>C++</span><span>SFML</span><span>Game Logic</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card anim-reveal" data-tilt>
+          <div class="proj-glow"></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-label">Web</span>
+              <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  data-lucide="github"></i></a>
+            </div>
+            <h3>Food Ordering Website</h3>
+            <p>Fully responsive food ordering platform with modern UI, built with clean HTML, CSS, and JavaScript.</p>
+            <div class="proj-tags">
+              <span>HTML</span><span>CSS</span><span>JavaScript</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="proj-card anim-reveal" data-tilt>
+          <div class="proj-glow"></div>
+          <div class="proj-body">
+            <div class="proj-top">
+              <span class="proj-label">Educational</span>
+              <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" aria-label="GitHub"><i
+                  data-lucide="github"></i></a>
+            </div>
+            <h3>API Guide & Tutorial</h3>
+            <p>Comprehensive educational content covering APIs, backend communication patterns, and integration best
+              practices.</p>
+            <div class="proj-tags">
+              <span>Technical Writing</span><span>APIs</span><span>Backend</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="center-cta anim-reveal">
+        <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" class="btn btn-ghost">
+          <i data-lucide="github" class="btn-icon"></i> View All on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BLOGS ===== -->
+  <section class="section" id="blogs">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">05</span>
+        <h2 class="section-title">Blog Posts</h2>
+        <div class="section-line"></div>
+      </div>
+      <p class="section-subtitle anim-reveal">I learn in public. Here's what I've been writing about on Medium.</p>
+      <div class="blog-grid" id="blog-grid">
+        <div class="blog-loading" id="blog-loading">
+          <div class="spinner"></div>
+          <span>Fetching latest posts...</span>
+        </div>
+      </div>
+      <div class="center-cta anim-reveal">
+        <a href="https://medium.com/@Muhammad._.anwar" target="_blank" rel="noopener" class="btn btn-ghost">
+          <i data-lucide="book-open" class="btn-icon"></i> Read All on Medium
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Reader Modal -->
+  <div class="blog-modal" id="blog-modal">
+    <div class="blog-modal-overlay" id="blog-modal-close-overlay"></div>
+    <div class="blog-modal-content">
+      <button class="blog-modal-close" id="blog-modal-close" aria-label="Close">
+        <i data-lucide="x"></i>
+      </button>
+      <article class="blog-reader" id="blog-reader">
+        <!-- Blog content loaded here -->
+      </article>
+    </div>
+  </div>
+
+  <!-- ===== EDUCATION & CERTS ===== -->
+  <section class="section section-dark" id="education">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">06</span>
+        <h2 class="section-title">Education & Certs</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="edu-grid">
+        <div class="edu-card anim-reveal">
+          <div class="edu-accent-bar"></div>
+          <div class="edu-top">
+            <i data-lucide="graduation-cap"></i>
+            <div>
+              <h3>FAST NUCES</h3>
+              <p>BS Computer Science</p>
+              <span class="edu-year">2024 — 2028</span>
+            </div>
+          </div>
+          <div class="edu-courses">
+            <span>Data Structures & Algorithms</span>
+            <span>Operating Systems</span>
+            <span>Parallel & Distributed Computing</span>
+            <span>Computer Organization</span>
+            <span>Software Testing</span>
+          </div>
+        </div>
+        <div class="certs-list anim-reveal">
+          <h3 class="certs-heading"><i data-lucide="award"></i> Certifications</h3>
+          <div class="cert-row">
+            <div class="cert-dot done"></div>
+            <div>
+              <h4>C++ Programming Certification</h4>
+              <span class="cert-status status-done">Completed</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-dot done"></div>
+            <div>
+              <h4>VoIP Development (Asterisk & FreePBX)</h4>
+              <span class="cert-status status-done">Completed</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-dot progress"></div>
+            <div>
+              <h4>Azure AZ-900</h4>
+              <span class="cert-status status-progress">In Progress</span>
+            </div>
+          </div>
+          <div class="cert-row">
+            <div class="cert-dot progress"></div>
+            <div>
+              <h4>100 Days of Python Bootcamp</h4>
+              <span class="cert-status status-progress">In Progress</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEETING CTA ===== -->
+  <section class="section section-meeting" id="meeting">
+    <div class="container">
+      <div class="meeting-box anim-reveal">
+        <div class="meeting-glow-orb"></div>
+        <div class="meeting-inner">
+          <i data-lucide="zap" class="meeting-icon"></i>
+          <h2>Let's connect and build something together</h2>
+          <p>Whether it's collaboration, freelance, technical discussion, or mentorship — I'm always open to meaningful
+            conversations.</p>
+          <div class="meeting-tags">
+            <span><i data-lucide="handshake"></i> Collaboration</span>
+            <span><i data-lucide="laptop"></i> Freelance</span>
+            <span><i data-lucide="message-circle"></i> Tech Discussion</span>
+            <span><i data-lucide="compass"></i> Mentorship</span>
+          </div>
+          <a href="mailto:muhammadanwarbaloch1@gmail.com?subject=1:1 Meeting Request" class="btn btn-accent btn-lg">
+            <i data-lucide="star" class="btn-icon"></i> Book a 1:1 Meeting
+          </a>
+          <span class="meeting-email"><i data-lucide="mail"></i> muhammadanwarbaloch1@gmail.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head anim-reveal">
+        <span class="section-num">07</span>
+        <h2 class="section-title">Get in Touch</h2>
+        <div class="section-line"></div>
+      </div>
+      <div class="contact-links anim-reveal">
+        <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" class="contact-tile">
+          <i data-lucide="github"></i>
+          <strong>GitHub</strong>
+          <span>anwarkhushk</span>
+        </a>
+        <a href="https://www.linkedin.com/in/muhammad-anwar-62100b325/" target="_blank" rel="noopener"
+          class="contact-tile">
+          <i data-lucide="linkedin"></i>
+          <strong>LinkedIn</strong>
+          <span>Muhammad Anwar</span>
+        </a>
+        <a href="https://medium.com/@Muhammad._.anwar" target="_blank" rel="noopener" class="contact-tile">
+          <i data-lucide="book-open"></i>
+          <strong>Medium</strong>
+          <span>@Muhammad._.anwar</span>
+        </a>
+        <a href="mailto:muhammadanwarbaloch1@gmail.com" class="contact-tile">
+          <i data-lucide="mail"></i>
+          <strong>Email</strong>
+          <span>muhammadanwarbaloch1@gmail.com</span>
+        </a>
+      </div>
+      <div class="contact-resume-cta anim-reveal">
+        <a href="resume.pdf" download class="btn btn-resume btn-lg">
+          <i data-lucide="download" class="btn-icon"></i> Download Resume
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <a href="#hero" class="footer-logo">
+        <span class="logo-char">&lt;</span><span class="logo-name">anwar</span><span class="logo-char">/&gt;</span>
+      </a>
+      <span class="footer-copy">Built by Muhammad Anwar · 2026</span>
+      <div class="footer-socials">
+        <a href="https://github.com/anwarkhushk" target="_blank" rel="noopener" aria-label="GitHub"><i
+            data-lucide="github"></i></a>
+        <a href="https://www.linkedin.com/in/muhammad-anwar-62100b325/" target="_blank" rel="noopener"
+          aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+        <a href="https://medium.com/@Muhammad._.anwar" target="_blank" rel="noopener" aria-label="Medium"><i
+            data-lucide="book-open"></i></a>
+        <a href="mailto:muhammadanwarbaloch1@gmail.com" aria-label="Email"><i data-lucide="mail"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== AI CHATBOT ===== -->
+  <button class="chat-fab" id="chat-fab" aria-label="Talk to AI">
+    <i data-lucide="sparkles" class="chat-fab-icon"></i>
+    <span class="chat-fab-label">AI</span>
+  </button>
+
+  <div class="chat-window" id="chat-window">
+    <div class="chat-header">
+      <div class="chat-header-info">
+        <div class="chat-avatar">MA</div>
+        <div>
+          <strong>Anwar AI</strong>
+          <span class="chat-status-dot">● Online</span>
+        </div>
+      </div>
+      <button class="chat-close" id="chat-close" aria-label="Close chat">
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+    <div class="chat-messages" id="chat-messages">
+      <div class="chat-msg bot">
+        <div class="chat-bubble">Hey! 👋 I'm Muhammad Anwar's AI assistant. Ask me about his projects, skills,
+          experience, or anything else!</div>
+      </div>
+    </div>
+    <div class="chat-suggestions" id="chat-suggestions">
+      <button class="chat-suggest" data-q="Who is Muhammad Anwar?">Who are you?</button>
+      <button class="chat-suggest" data-q="What projects have you built?">Projects</button>
+      <button class="chat-suggest" data-q="What are your skills?">Skills</button>
+      <button class="chat-suggest" data-q="Can I work with you?">Work together</button>
+    </div>
+    <form class="chat-input-bar" id="chat-form">
+      <input type="text" class="chat-input" id="chat-input" placeholder="Ask me anything..." autocomplete="off" />
+      <button type="submit" class="chat-send" aria-label="Send">
+        <i data-lucide="send"></i>
+      </button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
