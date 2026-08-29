@@ -55,7 +55,7 @@ function initParticles() {
         const dy = particles[i].y - particles[j].y;
         const d = Math.sqrt(dx * dx + dy * dy);
         if (d < 140) {
-          ctx.strokeStyle = `rgba(124,106,255,${(1 - d / 140) * 0.07})`;
+          ctx.strokeStyle = `rgba(122,28,46,${(1 - d / 140) * 0.07})`;
           ctx.lineWidth = 0.5;
           ctx.beginPath();
           ctx.moveTo(particles[i].x, particles[i].y);
@@ -68,7 +68,7 @@ function initParticles() {
     for (const p of particles) {
       ctx.beginPath();
       ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(124,106,255,${p.o})`;
+      ctx.fillStyle = `rgba(122,28,46,${p.o})`;
       ctx.fill();
     }
   }
@@ -315,12 +315,12 @@ function initChatbot() {
 
     // Identity
     if (match(lower, ['who are you', 'who is', 'about you', 'tell me about', 'introduce', 'yourself'])) {
-      return "I'm Muhammad Anwar — a 2nd year BS Computer Science student at FAST NUCES. I'm deeply interested in AI systems, cloud computing, and building things that solve real problems. I've built AI agents, Linux kernel modules, and full-stack web apps. I learn fast and ship faster. 🚀";
+      return "I'm Muhammad Anwar — a 3rd year BS Computer Science student at FAST NUCES. I'm deeply interested in AI systems, cloud computing, and building things that solve real problems. I've built AI agents, Linux kernel modules, and full-stack web apps. I learn fast and ship faster. 🚀";
     }
 
     // Projects
     if (match(lower, ['project', 'built', 'portfolio', 'what have you', 'nova', 'work'])) {
-      return "Here are some things I've built:<br><br>⭐ <strong>Nova AI Agent</strong> — Context-aware AI with n8n + LLaMA 3.3 + PostgreSQL memory<br>🌤️ <strong>Weather App</strong> — Real-time API-powered weather data<br>🐦 <strong>Flappy Bird</strong> — C++ game with SFML graphics<br>🍕 <strong>Food Ordering Website</strong> — Responsive web app<br>📘 <strong>API Guide</strong> — Educational content on REST APIs<br><br>Check them out in the <a href='#projects' style='color:#9d8fff'>Projects section</a>!";
+      return "Here are some things I've built:<br><br>⭐ <strong>Nova AI Agent</strong> — Context-aware AI with n8n + LLaMA 3.3 + PostgreSQL memory<br>🌤️ <strong>Weather App</strong> — Real-time API-powered weather data<br>🐦 <strong>Flappy Bird</strong> — C++ game with SFML graphics<br>🍕 <strong>Food Ordering Website</strong> — Responsive web app<br>📘 <strong>API Guide</strong> — Educational content on REST APIs<br><br>Check them out in the <a href='#projects' style='color:#9E3A50'>Projects section</a>!";
     }
 
     // AI / Nova
@@ -340,12 +340,12 @@ function initChatbot() {
 
     // Work together / hire / freelance
     if (match(lower, ['work with', 'hire', 'freelan', 'collaborate', 'job', 'intern', 'opportunity'])) {
-      return "Absolutely! I'm open to:<br><br>🤝 Collaboration on projects<br>💼 Freelance work<br>🏢 Internship opportunities<br>💡 Technical discussions<br><br>📧 Reach me at <strong>muhammadanwarbaloch1@gmail.com</strong> or <a href='#meeting' style='color:#9d8fff'>book a 1:1 meeting</a>!";
+      return "Absolutely! I'm open to:<br><br>🤝 Collaboration on projects<br>💼 Freelance work<br>🏢 Internship opportunities<br>💡 Technical discussions<br><br>📧 Reach me at <strong>muhammadanwarbaloch1@gmail.com</strong> or <a href='#meeting' style='color:#9E3A50'>book a 1:1 meeting</a>!";
     }
 
     // Blog / writing
     if (match(lower, ['blog', 'writ', 'medium', 'article', 'post'])) {
-      return "I write on Medium about AI, cloud, Linux, and my learning journey. Check out my blog posts in the <a href='#blogs' style='color:#9d8fff'>Blogs section</a> or visit <a href='https://medium.com/@Muhammad._.anwar' target='_blank' style='color:#9d8fff'>my Medium profile</a>! ✍️";
+      return "I write on Medium about AI, cloud, Linux, and my learning journey. Check out my blog posts in the <a href='#blogs' style='color:#9E3A50'>Blogs section</a> or visit <a href='https://medium.com/@Muhammad._.anwar' target='_blank' style='color:#9E3A50'>my Medium profile</a>! ✍️";
     }
 
     // Education
@@ -360,7 +360,7 @@ function initChatbot() {
 
     // Contact
     if (match(lower, ['contact', 'email', 'reach', 'github', 'linkedin', 'social'])) {
-      return "You can find me here:<br><br>🐙 <a href='https://github.com/anwarkhushk' target='_blank' style='color:#9d8fff'>GitHub</a><br>💼 <a href='https://www.linkedin.com/in/muhammad-anwar-62100b325/' target='_blank' style='color:#9d8fff'>LinkedIn</a><br>✍️ <a href='https://medium.com/@Muhammad._.anwar' target='_blank' style='color:#9d8fff'>Medium</a><br>📧 muhammadanwarbaloch1@gmail.com";
+      return "You can find me here:<br><br>🐙 <a href='https://github.com/anwarkhushk' target='_blank' style='color:#9E3A50'>GitHub</a><br>💼 <a href='https://www.linkedin.com/in/muhammad-anwar-62100b325/' target='_blank' style='color:#9E3A50'>LinkedIn</a><br>✍️ <a href='https://medium.com/@Muhammad._.anwar' target='_blank' style='color:#9E3A50'>Medium</a><br>📧 muhammadanwarbaloch1@gmail.com";
     }
 
     // Greeting
@@ -370,11 +370,11 @@ function initChatbot() {
 
     // Thank you
     if (match(lower, ['thank', 'thanks', 'cheers', 'awesome', 'cool'])) {
-      return "You're welcome! 😊 If you have more questions, I'm right here. You can also <a href='#meeting' style='color:#9d8fff'>book a 1:1 meeting</a> anytime!";
+      return "You're welcome! 😊 If you have more questions, I'm right here. You can also <a href='#meeting' style='color:#9E3A50'>book a 1:1 meeting</a> anytime!";
     }
 
     // Default
-    return "That's an interesting question! While I might not have the exact answer right now, Muhammad Anwar is always learning and building. Feel free to <a href='mailto:muhammadanwarbaloch1@gmail.com' style='color:#9d8fff'>reach out directly</a> for a detailed conversation! 💬";
+    return "That's an interesting question! While I might not have the exact answer right now, Muhammad Anwar is always learning and building. Feel free to <a href='mailto:muhammadanwarbaloch1@gmail.com' style='color:#9E3A50'>reach out directly</a> for a detailed conversation! 💬";
   }
 
   function match(text, keywords) {
