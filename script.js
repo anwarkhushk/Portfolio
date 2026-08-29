@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initChatbot();
   initBlogFeed();
   initBlogModal();
+  initGitHubPlugin();
 });
 
 /* ============================================
@@ -520,4 +521,48 @@ function openBlogModal(card) {
   `;
 
   modal.classList.add('open');
+}
+
+/* ============================================
+   GITHUB PROFILE PLUGIN
+   ============================================ */
+function initGitHubPlugin() {
+  const avatarEl = document.getElementById('github-avatar');
+  const nameEl = document.getElementById('github-name');
+  const bioEl = document.getElementById('github-bio');
+  const reposEl = document.getElementById('github-repos');
+  const followersEl = document.getElementById('github-followers');
+  const followingEl = document.getElementById('github-following');
+
+  if (!avatarEl) return;
+
+  const username = 'anwarkhushk';
+
+  fetch(`https://api.github.com/users/${username}`)
+    .then(res => res.json())
+    .then(data => {
+      // Set avatar image
+      if (data.avatar_url) {
+        avatarEl.innerHTML = `<img src="${data.avatar_url}" alt="${data.login}" />`;
+      }
+
+      // Set name
+      if (nameEl) {
+        nameEl.textContent = data.name || data.login || username;
+      }
+
+      // Set bio
+      if (bioEl) {
+        bioEl.textContent = data.bio || 'Open source contributor & developer';
+      }
+
+      // Set stats
+      if (reposEl) reposEl.textContent = data.public_repos ?? '—';
+      if (followersEl) followersEl.textContent = data.followers ?? '—';
+      if (followingEl) followingEl.textContent = data.following ?? '—';
+    })
+    .catch(() => {
+      // Fallback — keep default values
+      if (bioEl) bioEl.textContent = 'Open source contributor & developer';
+    });
 }

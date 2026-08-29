@@ -1367,7 +1367,7 @@ ul {
 /* ===== CONTACT ===== */
 .contact-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 18px;
 }
 
@@ -1404,6 +1404,196 @@ ul {
   font-size: 0.78rem;
   color: var(--text-3);
   word-break: break-all;
+}
+
+/* Plugin Cards (GitHub & LinkedIn) */
+.contact-tile-plugin {
+  padding: 0;
+  gap: 0;
+  align-items: stretch;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact-tile-plugin:hover {
+  transform: translateY(-6px);
+}
+
+.contact-plugin-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-bottom: 1px solid var(--border);
+  background: rgba(234, 227, 210, 0.02);
+}
+
+.contact-plugin-brand-icon {
+  width: 18px;
+  height: 18px;
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+
+.contact-plugin-brand-icon.linkedin-icon {
+  color: #0A66C2;
+}
+
+.contact-plugin-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  word-break: normal;
+}
+
+.contact-plugin-body {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+}
+
+.contact-plugin-avatar {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 2px solid var(--border-h);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.contact-plugin-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.contact-plugin-avatar svg {
+  width: 22px;
+  height: 22px;
+  color: var(--text-3);
+}
+
+.linkedin-avatar {
+  background: linear-gradient(135deg, #0A66C2, #004182);
+  border-color: rgba(10, 102, 194, 0.3);
+}
+
+.linkedin-avatar svg {
+  width: 22px;
+  height: 22px;
+  color: #fff;
+}
+
+.contact-plugin-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.contact-plugin-info strong {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.contact-plugin-bio {
+  font-size: 0.76rem;
+  color: var(--text-3);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  word-break: normal;
+}
+
+.contact-plugin-stats {
+  display: flex;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-plugin-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 12px 8px;
+}
+
+.contact-plugin-stat + .contact-plugin-stat {
+  border-left: 1px solid var(--border);
+}
+
+.stat-num {
+  font-family: var(--mono);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--accent-l);
+  word-break: normal;
+}
+
+.stat-label {
+  font-size: 0.68rem;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  word-break: normal;
+}
+
+.contact-plugin-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.contact-plugin-tags span {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: #0A66C2;
+  background: rgba(10, 102, 194, 0.08);
+  border: 1px solid rgba(10, 102, 194, 0.15);
+  padding: 3px 10px;
+  border-radius: 50px;
+  word-break: normal;
+}
+
+.contact-plugin-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 12px 20px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-3);
+  transition: color 0.2s;
+}
+
+.contact-tile-plugin:hover .contact-plugin-footer {
+  color: var(--accent-l);
+}
+
+.contact-plugin-footer svg {
+  width: 14px;
+  height: 14px;
 }
 
 /* ===== FOOTER ===== */
