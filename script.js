@@ -104,7 +104,10 @@ function initParticles() {
    CUSTOM CURSOR
    ============================================ */
 function initCursor() {
-  if (window.innerWidth < 768) return;
+  // Only enable custom cursor on devices with a real mouse pointer
+  const hasFineMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!hasFineMouse) return;
+
   const dot = document.getElementById('cursor-dot');
   const ring = document.getElementById('cursor-ring');
   if (!dot || !ring) return;
@@ -120,7 +123,7 @@ function initCursor() {
   });
 
   // Hover effect on interactive elements
-  const hovers = document.querySelectorAll('a, button, .proj-card, .blog-card, .mini-card, .contact-tile, .pill, .chat-suggest');
+  const hovers = document.querySelectorAll('a, button, .proj-card, .proj-card-link, .blog-card, .mini-card, .contact-tile, .pill, .chat-suggest');
   hovers.forEach(el => {
     el.addEventListener('mouseenter', () => ring.classList.add('hover'));
     el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
@@ -230,6 +233,10 @@ function initTypingAnimation() {
    PROJECT CARD GLOW
    ============================================ */
 function initProjectGlow() {
+  // Only enable glow tracking on devices with a real mouse pointer
+  const hasFineMouse = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  if (!hasFineMouse) return;
+
   document.querySelectorAll('.proj-card').forEach(card => {
     card.addEventListener('mousemove', (e) => {
       const r = card.getBoundingClientRect();
