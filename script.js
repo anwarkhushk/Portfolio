@@ -348,7 +348,7 @@ function initChatbot() {
 
     // Work together / hire / freelance
     if (match(lower, ['work with', 'hire', 'freelan', 'collaborate', 'job', 'intern', 'opportunity'])) {
-      return "Absolutely! I'm open to:<br><br>🤝 Collaboration on projects<br>💼 Freelance work<br>🏢 Internship opportunities<br>💡 Technical discussions<br><br>📧 Reach me at <strong>muhammadanwarbaloch1@gmail.com</strong> or <a href='#meeting' style='color:#9E3A50'>book a 1:1 meeting</a>!";
+      return "Absolutely! I'm open to:<br><br>🤝 Collaboration on projects<br>💼 Freelance work<br>🏢 Internship opportunities<br>💡 Technical discussions<br><br>📧 Reach me at <strong>anwarkhushk1@gmail.com</strong> or <a href='#meeting' style='color:#9E3A50'>book a 1:1 meeting</a>!";
     }
 
     // Blog / writing
@@ -368,7 +368,7 @@ function initChatbot() {
 
     // Contact
     if (match(lower, ['contact', 'email', 'reach', 'github', 'linkedin', 'social'])) {
-      return "You can find me here:<br><br>🐙 <a href='https://github.com/anwarkhushk' target='_blank' style='color:#9E3A50'>GitHub</a><br>💼 <a href='https://www.linkedin.com/in/muhammad-anwar-62100b325/' target='_blank' style='color:#9E3A50'>LinkedIn</a><br>✍️ <a href='https://medium.com/@Muhammad._.anwar' target='_blank' style='color:#9E3A50'>Medium</a><br>📧 muhammadanwarbaloch1@gmail.com";
+      return "You can find me here:<br><br>🐙 <a href='https://github.com/anwarkhushk' target='_blank' style='color:#9E3A50'>GitHub</a><br>💼 <a href='https://www.linkedin.com/in/muhammad-anwar-62100b325/' target='_blank' style='color:#9E3A50'>LinkedIn</a><br>✍️ <a href='https://medium.com/@Muhammad._.anwar' target='_blank' style='color:#9E3A50'>Medium</a><br>📧 anwarkhushk1@gmail.com";
     }
 
     // Greeting
@@ -382,7 +382,7 @@ function initChatbot() {
     }
 
     // Default
-    return "That's an interesting question! While I might not have the exact answer right now, Muhammad Anwar is always learning and building. Feel free to <a href='mailto:muhammadanwarbaloch1@gmail.com' style='color:#9E3A50'>reach out directly</a> for a detailed conversation! 💬";
+    return "That's an interesting question! While I might not have the exact answer right now, Muhammad Anwar is always learning and building. Feel free to <a href='mailto:anwarkhushk1@gmail.com' style='color:#9E3A50'>reach out directly</a> for a detailed conversation! 💬";
   }
 
   function match(text, keywords) {
